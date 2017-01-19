@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+</head>
+<style type="text/css">
+
+
+	@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+
+h4 { 
+	font: bold 2em monospace;
+  color: black;
+	border-right: .1em solid black;
+	width: calc(0.55em * 14); 
+	width: 14ch;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-animation: typing 8s steps(14, end),
+	           blink-caret .5s step-end infinite alternate;
+}
+.animated {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+@-webkit-keyframes flipInY {
+  0% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+            transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    -webkit-transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+            transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    -webkit-transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
+  }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+            transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+            transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+
+  100% {
+    -webkit-transform: perspective(400px);
+            transform: perspective(400px);
+  }
+}
+
+@keyframes flipInY {
+  0% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+            transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    -webkit-transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+            transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    -webkit-transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
+  }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+            transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+            transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+
+  100% {
+    -webkit-transform: perspective(400px);
+            transform: perspective(400px);
+  }
+}
+
+.flipInY {
+  -webkit-backface-visibility: visible !important;
+          backface-visibility: visible !important;
+  -webkit-animation-name: flipInY;
+          animation-name: flipInY;
+}
+
+
+
+
+a {color:#FF7361;}
+#cont-cubo {
+margin:100px auto;
+perspective:600px;
+animation:cont-cubo 10s infinite linear; linear;
+}
+.cubo {
+position: relative;
+margin: 0 auto;
+height: 200px;
+width: 200px;
+animation:giro 25s infinite linear;
+transform-style:preserve-3d;
+}
+.cubo div {
+position: absolute;
+height: 200px;
+width: 200px;
+-moz-cubo-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5); /* Firefox anti aliasing */
+animation:rotate 25s infinite linear;
+}
+.cubo div img {
+  width:200px;
+  height:200px;
+  margin: 0; padding: 0; border: 0 none transparent;
+
+}
+.cubo div.cara1 {
+transform:translateZ(100px);
+}
+.cubo div.cara2 {
+transform:rotateY(90deg) translateZ(100px);
+}
+.cubo div.cara3 {
+transform:rotateY(180deg) translateZ(100px);
+}
+.cubo div.cara4 {
+transform:rotateY(-90deg) translateZ(100px);
+}
+.cubo div.cara5 {
+transform:rotateX(-90deg) translateZ(100px) rotate(180deg);
+}
+.cubo div.cara6 {
+transform:rotateX(90deg) translateZ(100px);
+}
+@keyframes giro {
+  0% {transform: rotateX(0deg)   rotateY(0deg);}
+  100% {transform: rotateX(1080deg) rotateY(360deg);
+  }
+}
+@keyframes rot {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+ }
+
+ .modal-header{
+  background-color: #b3ffff;
+ }
+ .modal-footer{
+  background-color: #80ffff;
+ }
+ #bbtn{
+  background-color: #009966;
+ }
+</style>
+<body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '373831462979444',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+
+    // ADD ADDITIONAL FACEBOOK CODE HERE
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<div class="flipInY animated">
+			<img height= "100" width= "300" class="site__title mega" src="http://sharesume.com/wp-content/uploads/2016/10/TryCinema-LOGO-1024x443.jpg"><br><br>
+		</div>
+    <div class="container">
+<p id="show"></p>
+<br><h4>Hi Dhrubesh!</h4>
+
+<div id="cont-cubo">
+  <div class="cubo">
+    <div class="cara1"><img alt="" src="http://jacksonville.com/sites/default/files/imagecache/superphoto/10846614.jpg"></div>
+    <div class="cara2"><img alt="" src="http://favim.com/orig/201103/06/Favim.com-5510.jpg"></div>
+    <div class="cara3"><img alt="" src="http://s8.favim.com/orig/72/anger-black-amp-white-blonde-braid-Favim.com-682350.jpg"></div>
+    <div class="cara4"><img alt="" src="https://i.ytimg.com/vi/rT-8yFCsBWQ/maxresdefault.jpg"></div>
+    <div class="cara5"><img alt="" src="http://images2.fanpop.com/images/photos/3400000/Friends-Wallpapers-friends-3465900-1024-768.jpg"></div>
+    <div class="cara6"><img alt="" src="https://s-media-cache-ak0.pinimg.com/564x/20/b9/bb/20b9bb3f0cd83d0ca30924c66f0515cc.jpg"></div>
+  </div>
+</div>
+
+<br><br>
+<p style="color: grey;">Challenge your friend to embrace the behaviour of an actor and apply the same for 24hours in their life.
+<br>
+CLick on the button to see which actor you wanna challenge your friend.</p>
+<br>
+
+
+
+<div class="container">
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" onclick="random()">Click</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h5 class="modal-title">Some heading</h4>
+        </div>
+        <div class="modal-body">
+
+<p id="demo"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" id="bbtn" data-dismiss="modal" style="color: white;">Share</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+
+
+
+<script type="text/javascript">
+	var info =  '{"movies":[' +
+'{"id":1,"name":"John","ss":"Doe" },' +
+'{"id":2,"name":"Anna","ss":"Smith" },' +
+'{"id":3,"name":"Peter","ss":"Jones" }]}';
+obj = JSON.parse(info);
+
+
+
+function random(){var x = Math.floor((Math.random() * 3));
+
+document.getElementById("demo").innerHTML = "I challenge Deepak to be" + " " +
+obj.movies[x].name + " " + "from the movie" + " " + obj.movies[x].ss;
+                 }
+
+
+</script>
+</body>
+</html>
